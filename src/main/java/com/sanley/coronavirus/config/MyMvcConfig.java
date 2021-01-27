@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 @Configuration
 public class MyMvcConfig extends WebMvcConfigurationSupport {
-
+    @Override
     //静态资源释放
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")

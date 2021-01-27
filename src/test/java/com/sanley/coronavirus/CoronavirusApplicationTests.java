@@ -1,23 +1,20 @@
 package com.sanley.coronavirus;
-
-import com.sanley.coronavirus.dao.BaseDao;
-import com.sanley.coronavirus.dao.PatientDao;
-import com.sanley.coronavirus.entity.Base;
-import com.sanley.coronavirus.entity.Patient;
-import org.junit.jupiter.api.Test;
+import com.sanley.coronavirus.util.crawler.MyProcessor;
+import com.sanley.coronavirus.util.crawler.SpiderTask;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+@RunWith(SpringRunner.class)
 @SpringBootTest
-class CoronavirusApplicationTests {
-    BaseDao dao;
-    PatientDao da;
+public class CoronavirusApplicationTests {
+    @Autowired
+    private SpiderTask spiderTask;
     @Test
-    void contextLoads() {
-        System.out.println("330321199809267326");
-        System.out.println(da.findAll());
-        Base byIdCard = dao.findByIdCard("330321199809267326");
-        System.out.println(byIdCard);
+    public void contextLoads() {
+        spiderTask.startSpider();
     }
 
 }
