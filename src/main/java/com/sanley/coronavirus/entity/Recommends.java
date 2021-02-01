@@ -21,4 +21,6 @@ public class Recommends {
 	private String linkUrl;
 
 	private String imgUrl;
+
+	private String description;
 }

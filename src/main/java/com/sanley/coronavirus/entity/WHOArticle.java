@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Data
 @Accessors(chain=true)
 @Component
-public class WHOArticle {
+public class WHOArticle extends Recommends{
 	private String linkUrl;
 
 	private String imgUrl;

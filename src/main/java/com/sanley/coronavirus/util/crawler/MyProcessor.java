@@ -1,5 +1,6 @@
 package com.sanley.coronavirus.util.crawler;
 
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
@@ -12,7 +13,6 @@ public class MyProcessor implements PageProcessor {
 	定时执行,格式：秒分时日月星期
  */
 	@Override
-//	@Scheduled(cron = "0 0 16 * * ?", initialDelay = 1000,fixedDelay = 1000000)
 	public void process(Page page) {
 		page.putField("data",page.getJson());
 	}

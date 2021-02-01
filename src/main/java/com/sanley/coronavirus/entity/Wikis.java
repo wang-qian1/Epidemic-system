@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Data
 @Accessors(chain=true)
 @Component
-public class Wikis {
+public class Wikis extends Recommends {
 	private String linkUrl;
 
 	private String description;

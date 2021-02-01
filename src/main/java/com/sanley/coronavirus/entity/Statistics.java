@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Statistics {
 	private String position;
+	private String positionCode;
 	private int currentConfirmedCount;
 	private int curedCount;
 	private int confirmedCount;

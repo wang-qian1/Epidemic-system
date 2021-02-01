@@ -36,7 +36,7 @@ public class Root {
 
 	private List<Wikis> wikis ;
 
-	private WHOArticle WHOArticle;
+	private List<WHOArticle> WHOArticle;
 
 	private List<String> notes ;
 }

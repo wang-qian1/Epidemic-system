@@ -1,6 +1,6 @@
 package com.sanley.coronavirus;
-import com.sanley.coronavirus.util.crawler.MyProcessor;
 import com.sanley.coronavirus.util.crawler.SpiderTask;
+import com.sanley.coronavirus.util.crawler.UtilCareler;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,10 +11,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class CoronavirusApplicationTests {
     @Autowired
-    private SpiderTask spiderTask;
+    private UtilCareler utilCareler;
     @Test
     public void contextLoads() {
-        spiderTask.startSpider();
+        utilCareler.Util();
     }
 
 }
