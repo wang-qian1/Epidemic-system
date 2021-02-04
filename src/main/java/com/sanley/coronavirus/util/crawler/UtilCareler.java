@@ -7,15 +7,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class UtilCareler {
 	@Autowired
-	private MyProcessor myProcessor;
-	@Autowired
-	private MyPipeline myPipeline;
-	@Autowired
 	private SpiderTask spiderTask;
 
 	@Scheduled(cron = "0 0 16 * * ?")
 	public void Util() {
-		spiderTask.startSpider("http://111.231.75.86:8000/api/statistics/latest", myProcessor, myPipeline);
-//		spiderTask.startSpider("http://111.231.75.86:8000/api/countries/daily", statisticsProcessor, statisticsPipeline);
+		spiderTask.startSpider("http://111.231.75.86:8000/api/statistics/latest", "statistics");
+		spiderTask.startSpider("http://111.231.75.86:8000/api/countries/CHN/daily", "daily");
+		spiderTask.startSpider("http://111.231.75.86:8000/api/provinces/CHN/daily", "provincesDaily");
+		spiderTask.startSpider("http://111.231.75.86:8000/api/cities/CHN", "citiesDaily");
 	}
 }

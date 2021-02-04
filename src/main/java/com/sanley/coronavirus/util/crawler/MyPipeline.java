@@ -1,17 +1,27 @@
 package com.sanley.coronavirus.util.crawler;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.sanley.coronavirus.dao.NewsDao;
 import com.sanley.coronavirus.dao.StatisticsDao;
 import com.sanley.coronavirus.entity.*;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
 
+
 @Component
 public class MyPipeline implements us.codecraft.webmagic.pipeline.Pipeline {
+	private String sel;
+
+	public void setSel(String sel) {
+		this.sel = sel;
+	}
+
 	@Autowired
 	private StatisticsDao statisticsDao;
 	@Autowired
@@ -24,10 +34,32 @@ public class MyPipeline implements us.codecraft.webmagic.pipeline.Pipeline {
 	private Root root;
 	@Autowired
 	private Statistics globalstatistics,domesticStatistics,internationalStatistics;
+	private JSONArray dailyData;
 	@Override
 	public void process(ResultItems resultItems, Task task) {
-		root = JSON.parseObject(resultItems.get("data").toString(), new TypeReference<Root>(){});
-		init();
+		switch (sel){
+			case "statistics" :
+				root = JSON.parseObject(resultItems.get("data").toString(), new TypeReference<Root>(){});
+				init();
+				break;
+			case "daily" :
+				dailyData = JSON.parseArray(resultItems.get("daily").toString());
+				statisticsDao.runcateDaily();
+				getDailyData();
+				break;
+			case "provincesDaily" :
+				dailyData = JSON.parseArray(resultItems.get("provincesDaily").toString());
+				statisticsDao.runcateProvincesDaily();
+				getProvincesDailyData();
+				break;
+			case "citiesDaily" :
+				dailyData = JSON.parseArray(resultItems.get("citiesDaily").toString());
+				statisticsDao.runcateCitiesDaily();
+				getCitiesDailyData();
+				break;
+			default:
+					break;
+		}
 	}
 
 	public void reSet() {
@@ -109,4 +141,30 @@ public class MyPipeline implements us.codecraft.webmagic.pipeline.Pipeline {
 			newsDao.addTimelines(timelines);
 		}
 	}
+
+	public void getDailyData() {
+		for (Object object: dailyData) {
+			DailyData dailyData = JSON.parseObject(object.toString(),new TypeReference<DailyData>(){});
+			System.out.println("-------------->"+dailyData);
+			statisticsDao.addDaily(dailyData);
+		}
+	}
+
+	public void getProvincesDailyData() {
+		for (Object object: dailyData) {
+			ProvincesDaily provincesDaily = JSON.parseObject(object.toString(),new TypeReference<ProvincesDaily>(){});
+			System.out.println("-------------->"+provincesDaily);
+			statisticsDao.addProvincesDaily(provincesDaily);
+		}
+	}
+
+	public void getCitiesDailyData() {
+		for (Object object: dailyData) {
+			CitiesDaily citiesDaily = JSON.parseObject(object.toString(),new TypeReference<CitiesDaily>(){});
+			System.out.println("-------------->"+citiesDaily);
+			statisticsDao.addCitiesDaily(citiesDaily);
+		}
+	}
+
+
 }
