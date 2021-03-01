@@ -19,11 +19,19 @@ public class UserServiceImp implements UserService {
     @Override
     public User findByUsername(String username) {
         return dao.findByUsername(username);
+    }    @Override
+
+    public User userLogin(String username, String password) {
+        return dao.userLogin(username, password);
     }
 
     @Override
-    public void addUser(User user) {
-        dao.addUser(user);
+    public Boolean addUser(User user) {
+        if (dao.addUser(user) > 0){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override

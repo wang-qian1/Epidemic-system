@@ -4,9 +4,11 @@ Created by shkstart on 2020/3/15.
 
 import com.sanley.coronavirus.entity.User;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 @Mapper
 public interface UserDao {
     //通过username查找User
@@ -16,12 +18,21 @@ public interface UserDao {
             @Result(property = "name", column = "name"),
             @Result(property = "password", column = "password"),
             @Result(property = "phone", column = "phone"),
-            @Result(property = "unit", column = "unit"),
-            @Result(property = "authenticationList",column = "id",javaType = java.util.List.class,many = @Many(select = "com.sanley.coronavirus.dao.AuthenticationDao.findByUserId"))})
+            @Result(property = "unit", column = "unit")})
     public User findByUsername(String username);
     //添加用户
     @Insert("insert into user(username,password,phone,unit,name)values(#{username},#{password},#{phone},#{unit},#{name})")
-    public void addUser(User user);
+    public int addUser(User user);
+
+    //用户登录
+    @Select("select * from user where username=#{username} and password=#{password}")
+    @Results({ @Result(id = true, property = "id", column = "id"),
+            @Result(property = "username", column = "username"),
+            @Result(property = "name", column = "name"),
+            @Result(property = "password", column = "password"),
+            @Result(property = "phone", column = "phone"),
+            @Result(property = "unit", column = "unit")})
+    public User userLogin(@Param("username") String username, @Param("password") String password);
 
     //查找所有用户
     @Select("select * from user")
@@ -30,8 +41,7 @@ public interface UserDao {
             @Result(property = "name", column = "name"),
             @Result(property = "password", column = "password"),
             @Result(property = "phone", column = "phone"),
-            @Result(property = "unit", column = "unit"),
-            @Result(property = "authenticationList",column = "id",javaType = List.class,many = @Many(select = "com.sanley.coronavirus.dao.AuthenticationDao.findByUserId"))})
+            @Result(property = "unit", column = "unit")})
     public List<User> findAll();
 
     //删除用户

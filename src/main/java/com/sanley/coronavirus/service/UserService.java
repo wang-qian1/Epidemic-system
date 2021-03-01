@@ -9,10 +9,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 public interface UserService {
+    //用户登录
+    public  User userLogin(String username,String password);
     //根据账号查找用户
     public User findByUsername(String username);
     //添加用户
-    public void addUser(User user);
+    public Boolean addUser(User user);
     //删除用户
     public void deleteUser(int id);
     //查找所有用户

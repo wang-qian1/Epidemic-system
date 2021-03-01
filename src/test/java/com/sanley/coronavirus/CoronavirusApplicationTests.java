@@ -14,7 +14,7 @@ public class CoronavirusApplicationTests {
     private UtilCareler utilCareler;
     @Test
     public void contextLoads() {
-        utilCareler.Util();
+//        utilCareler.Util();
     }
 
 }
