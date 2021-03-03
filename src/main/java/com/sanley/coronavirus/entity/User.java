@@ -17,18 +17,11 @@ public class User {
     private String name;
     private String username;
     private String password;
-    private List<Authentication> authenticationList;
     private BigInteger phone;
     private String unit;
 
     public boolean isAdmin(){
         boolean flag=false;
-        for (Authentication authentication:authenticationList){
-            if ("Admin".equals(authentication.getName())){
-                flag=true;
-            }
-
-        }
         return flag;
     }
 }

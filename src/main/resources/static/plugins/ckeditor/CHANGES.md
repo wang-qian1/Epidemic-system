@@ -124,7 +124,7 @@ Other Changes:
 
 Fixed Issues:
 
-* [#13609](http://dev.ckeditor.com/ticket/13609): [Edge] Fixed: The browser crashes when switching to the source mode. Thanks to [Andrew Williams and Mark Smeed](http://webxsolution.com/)!
+* [#13609](http://dev.ckeditor.com/ticket/13609): [Edge] Fixed: The browser crashes when switching to the message mode. Thanks to [Andrew Williams and Mark Smeed](http://webxsolution.com/)!
 * [PR#201](https://github.com/ckeditor/ckeditor-dev/pull/201): Fixed: Buttons in the toolbar configurator cause form submission. Thanks to [colemanw](https://github.com/colemanw)!
 * [#13422](http://dev.ckeditor.com/ticket/13422): Fixed: A monospaced font should be used in the `<textarea>` element storing editor configuration in the toolbar configurator.
 * [#13494](http://dev.ckeditor.com/ticket/13494): Fixed: Error thrown in the toolbar configurator if plugin requirements are not met.
@@ -176,7 +176,7 @@ New Features:
 Fixed Issues:
 
 * [#13334](http://dev.ckeditor.com/ticket/13334): Fixed: Error after nesting widgets and playing with undo/redo.
-* [#13118](http://dev.ckeditor.com/ticket/13118): Fixed: The [`editor.getSelectedHtml()`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-method-getSelectedHtml) method throws an error when called in the source mode.
+* [#13118](http://dev.ckeditor.com/ticket/13118): Fixed: The [`editor.getSelectedHtml()`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-method-getSelectedHtml) method throws an error when called in the message mode.
 * [#13158](http://dev.ckeditor.com/ticket/13158): Fixed: Error after canceling a dialog when creating a widget.
 * [#13197](http://dev.ckeditor.com/ticket/13197): Fixed: Linked inline [Enhanced Image](http://ckeditor.com/addon/image2) alignment class is not transferred to the widget wrapper.
 * [#13199](http://dev.ckeditor.com/ticket/13199): Fixed: [Semantic Embed](http://ckeditor.com/addon/embedsemantic) does not support widget classes.
@@ -299,7 +299,7 @@ Fixed issues:
 
 * Fixed XSS vulnerability in the HTML parser reported by [Dheeraj Joshi](https://twitter.com/dheerajhere) and [Prem Kumar](https://twitter.com/iAmPr3m).
 
-	Issue summary: It was possible to execute XSS inside CKEditor after persuading the victim to: (i) switch CKEditor to source mode, then (ii) paste a specially crafted HTML code, prepared by the attacker, into the opened CKEditor source area, and (iii) switch back to WYSIWYG mode.
+	Issue summary: It was possible to execute XSS inside CKEditor after persuading the victim to: (i) switch CKEditor to message mode, then (ii) paste a specially crafted HTML code, prepared by the attacker, into the opened CKEditor message area, and (iii) switch back to WYSIWYG mode.
 
 **An upgrade is highly recommended!**
 
@@ -319,7 +319,7 @@ Fixed Issues:
 * [#13027](http://dev.ckeditor.com/ticket/13027): Fixed: Keyboard navigation in dialog windows with multiple tabs not following IBM CI 162 instructions or [ARIA Authoring Practices](http://www.w3.org/TR/2013/WD-wai-aria-practices-20130307/#tabpanel).
 * [#12256](http://dev.ckeditor.com/ticket/12256): Fixed: Basic styles classes are lost when pasting from Microsoft Word if [basic styles](http://ckeditor.com/addon/basicstyles) were configured to use classes.
 * [#12729](http://dev.ckeditor.com/ticket/12729): Fixed: Incorrect structure created when merging a block into a list item on *Backspace* and *Delete*.
-* [#13031](http://dev.ckeditor.com/ticket/13031): [Firefox] Fixed: No more line breaks in source view since Firefox 36.
+* [#13031](http://dev.ckeditor.com/ticket/13031): [Firefox] Fixed: No more line breaks in message view since Firefox 36.
 * [#13131](http://dev.ckeditor.com/ticket/13131): Fixed: The [Code Snippet](http://ckeditor.com/addon/codesnippet) plugin cannot be used without the [IFrame Editing Area](http://ckeditor.com/addon/wysiwygarea) plugin.
 * [#9086](http://dev.ckeditor.com/ticket/9086): Fixed: Invalid ARIA property used on paste area `<iframe>`.
 * [#13164](http://dev.ckeditor.com/ticket/13164): Fixed: Error when inserting a hidden field.
@@ -355,7 +355,7 @@ Fixed Issues:
 
 * Fixed XSS vulnerability in the HTML parser reported by [Maco Cortes](https://www.facebook.com/Maaacoooo).
 
-	Issue summary: It was possible to execute XSS inside CKEditor after persuading the victim to: (i) switch CKEditor to source mode, then (ii) paste a specially crafted HTML code, prepared by the attacker, into the opened CKEditor source area, and (iii) switch back to WYSIWYG mode.
+	Issue summary: It was possible to execute XSS inside CKEditor after persuading the victim to: (i) switch CKEditor to message mode, then (ii) paste a specially crafted HTML code, prepared by the attacker, into the opened CKEditor message area, and (iii) switch back to WYSIWYG mode.
 
 **An upgrade is highly recommended!**
 
@@ -522,7 +522,7 @@ Fixed Issues:
 * [#11872](http://dev.ckeditor.com/ticket/11872): Made [`element.addClass()`](http://docs.ckeditor.com/#!/api/CKEDITOR.dom.element-method-addClass) chainable symmetrically to [`element.removeClass()`](http://docs.ckeditor.com/#!/api/CKEDITOR.dom.element-method-removeClass).
 * [#11813](http://dev.ckeditor.com/ticket/11813): Fixed: Link lost while pasting a captioned image and restoring an undo snapshot ([Enhanced Image](http://ckeditor.com/addon/image2)).
 * [#11814](http://dev.ckeditor.com/ticket/11814): Fixed: _Link_ and _Unlink_ entries persistently displayed in the [Enhanced Image](http://ckeditor.com/addon/image2) context menu.
-* [#11839](http://dev.ckeditor.com/ticket/11839): [IE9] Fixed: The caret jumps out of the editable area when resizing the editor in the source mode.
+* [#11839](http://dev.ckeditor.com/ticket/11839): [IE9] Fixed: The caret jumps out of the editable area when resizing the editor in the message mode.
 * [#11822](http://dev.ckeditor.com/ticket/11822): [WebKit] Fixed: Editing anchors by double-click is broken in some cases.
 * [#11823](http://dev.ckeditor.com/ticket/11823): [IE8] Fixed: [Table Resize](http://ckeditor.com/addon/tableresize) throws an error over scrollbar.
 * [#11788](http://dev.ckeditor.com/ticket/11788): Fixed: It is not possible to change the language back to _Not set_ in the [Code Snippet](http://ckeditor.com/addon/codesnippet) dialog window.
@@ -569,7 +569,7 @@ New Features:
 * [#11737](http://dev.ckeditor.com/ticket/11737): Introduced an option to prevent [filtering](http://docs.ckeditor.com/#!/guide/dev_advanced_content_filter) of an element that matches custom criteria (see [`filter.addElementCallback()`](http://docs.ckeditor.com/#!/api/CKEDITOR.filter-method-addElementCallback)).
 * [#11532](http://dev.ckeditor.com/ticket/11532): Introduced the [`editor.addContentsCss()`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-method-addContentsCss) method that can be used for [adding custom CSS files](http://docs.ckeditor.com/#!/guide/plugin_sdk_styles).
 * [#11536](http://dev.ckeditor.com/ticket/11536): Added the [`CKEDITOR.tools.htmlDecode()`](http://docs.ckeditor.com/#!/api/CKEDITOR.tools-method-htmlDecode) method for decoding HTML entities.
-* [#11225](http://dev.ckeditor.com/ticket/11225): Introduced the [`CKEDITOR.tools.transparentImageData`](http://docs.ckeditor.com/#!/api/CKEDITOR.tools-property-transparentImageData) property which contains transparent image data to be used in CSS or as image source.
+* [#11225](http://dev.ckeditor.com/ticket/11225): Introduced the [`CKEDITOR.tools.transparentImageData`](http://docs.ckeditor.com/#!/api/CKEDITOR.tools-property-transparentImageData) property which contains transparent image data to be used in CSS or as image message.
 
 Other Changes:
 
@@ -594,7 +594,7 @@ New Features:
 
 Fixed Issues:
 
-* [#11677](http://dev.ckeditor.com/ticket/11677): Fixed: Undo/Redo keystrokes are blocked in the source mode.
+* [#11677](http://dev.ckeditor.com/ticket/11677): Fixed: Undo/Redo keystrokes are blocked in the message mode.
 * [#11717](http://dev.ckeditor.com/ticket/11717): [Document Properties](http://ckeditor.com/addon/docprops) plugin requires the [Color Dialog](http://ckeditor.com/addon/colordialog) plugin to work.
 
 ## CKEditor 4.3.4
@@ -623,7 +623,7 @@ Fixed Issues:
 * [#11413](http://dev.ckeditor.com/ticket/11413): Fixed: Incorrect [`editor.execCommand()`](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-method-execCommand) behavior.
 * [#11438](http://dev.ckeditor.com/ticket/11438): Splitting table cells vertically is no longer changing table structure.
 * [#8899](http://dev.ckeditor.com/ticket/8899): Fixed: Links in the [About CKEditor](http://ckeditor.com/addon/about) dialog window now open in a new browser window or tab.
-* [#11490](http://dev.ckeditor.com/ticket/11490): Fixed: [Menu button](http://ckeditor.com/addon/menubutton) panel not showing in the source mode.
+* [#11490](http://dev.ckeditor.com/ticket/11490): Fixed: [Menu button](http://ckeditor.com/addon/menubutton) panel not showing in the message mode.
 * [#11417](http://dev.ckeditor.com/ticket/11417): The [`widget.doubleclick`](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.widget-event-doubleclick) event is not canceled anymore after editing was triggered.
 * [#11253](http://dev.ckeditor.com/ticket/11253): [IE] Fixed: Clipped upload button in the [Enhanced Image](http://ckeditor.com/addon/image2) dialog window.
 * [#11359](http://dev.ckeditor.com/ticket/11359): Standardized the way anchors are discovered by the [Link](http://ckeditor.com/addon/link) plugin.
@@ -658,8 +658,8 @@ Fixed Issues:
 * [#11290](http://dev.ckeditor.com/ticket/11290): Removed redundant code in the [Source Dialog](http://ckeditor.com/addon/sourcedialog) plugin.
 * [#11133](http://dev.ckeditor.com/ticket/11133): [Page Break](http://ckeditor.com/addon/pagebreak) becomes editable if pasted.
 * [#11126](http://dev.ckeditor.com/ticket/11126): Fixed: Native Undo executed once the bottom of the snapshot stack is reached.
-* [#11131](http://dev.ckeditor.com/ticket/11131): [Div Editing Area](http://ckeditor.com/addon/divarea): Fixed: Error thrown when switching to source mode if the selection was in widget's nested editable.
-* [#11139](http://dev.ckeditor.com/ticket/11139): [Div Editing Area](http://ckeditor.com/addon/divarea): Fixed: Elements Path is not cleared after switching to source mode.
+* [#11131](http://dev.ckeditor.com/ticket/11131): [Div Editing Area](http://ckeditor.com/addon/divarea): Fixed: Error thrown when switching to message mode if the selection was in widget's nested editable.
+* [#11139](http://dev.ckeditor.com/ticket/11139): [Div Editing Area](http://ckeditor.com/addon/divarea): Fixed: Elements Path is not cleared after switching to message mode.
 * [#10778](http://dev.ckeditor.com/ticket/10778): Fixed a bug with range enlargement. The range no longer expands to visible whitespace.
 * [#11146](http://dev.ckeditor.com/ticket/11146): [IE] Fixed: Preview window switches Internet Explorer to Quirks Mode.
 * [#10762](http://dev.ckeditor.com/ticket/10762): [IE] Fixed: JavaScript code displayed in preview window's URL bar.

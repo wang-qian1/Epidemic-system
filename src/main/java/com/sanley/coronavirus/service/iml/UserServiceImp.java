@@ -19,7 +19,18 @@ public class UserServiceImp implements UserService {
     @Override
     public User findByUsername(String username) {
         return dao.findByUsername(username);
-    }    @Override
+    }
+
+    @Override
+    public Boolean updateUser(User user) {
+        if (dao.updateUser(user)>0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
 
     public User userLogin(String username, String password) {
         return dao.userLogin(username, password);
@@ -35,8 +46,12 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public void deleteUser(int id) {
-        dao.deleteUser(id);
+    public Boolean deleteUser(String username) {
+        if (dao.deleteUser(username)>0){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     @Override

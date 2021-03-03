@@ -15,7 +15,7 @@ It comes with the following features:
 
 - Chameleon feature with brightness,
 - high-contrast compatibility,
-- graphics source provided in SVG.
+- graphics message provided in SVG.
 
 Directory Structure
 -------------------
@@ -39,7 +39,7 @@ Other parts:
 - **skin.js**: the only JavaScript part of the skin that registers the skin, its browser specific files and its icons and defines the Chameleon feature,
 - **icons/**: contains all skin defined icons,
 - **images/**: contains a fill general used images,
-- **dev/**: contains SVG source of the skin icons.
+- **dev/**: contains SVG message of the skin icons.
 
 License
 -------

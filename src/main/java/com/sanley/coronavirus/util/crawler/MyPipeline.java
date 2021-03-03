@@ -13,6 +13,11 @@ import org.springframework.stereotype.Component;
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 
 @Component
 public class MyPipeline implements us.codecraft.webmagic.pipeline.Pipeline {
@@ -91,7 +96,7 @@ public class MyPipeline implements us.codecraft.webmagic.pipeline.Pipeline {
 	}
 
 	public void getStatistics(Statistics statistics) {
-		if (statisticsDao.find(statistics.getPositionCode())!= null){
+		if (statisticsDao.findByPosition(statistics.getPositionCode())!= null){
 			statisticsDao.update(statistics);
 		} else {
 			statisticsDao.add(statistics);
@@ -161,8 +166,10 @@ public class MyPipeline implements us.codecraft.webmagic.pipeline.Pipeline {
 	public void getCitiesDailyData() {
 		for (Object object: dailyData) {
 			CitiesDaily citiesDaily = JSON.parseObject(object.toString(),new TypeReference<CitiesDaily>(){});
-			System.out.println("-------------->"+citiesDaily);
-			statisticsDao.addCitiesDaily(citiesDaily);
+			if (!citiesDaily.getProvinceName().equals("A")){
+				System.out.println("-------------->"+citiesDaily);
+				statisticsDao.addCitiesDaily(citiesDaily);
+			}
 		}
 	}
 

@@ -3,7 +3,6 @@ Created by shkstart on 2020/2/24.
 */
 
 import com.sanley.coronavirus.entity.Base;
-import com.sanley.coronavirus.entity.Cure;
 import com.sanley.coronavirus.entity.Touch;
 import org.apache.ibatis.annotations.*;
 

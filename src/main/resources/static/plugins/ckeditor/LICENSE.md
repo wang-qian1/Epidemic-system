@@ -91,7 +91,7 @@ your programs, too.
   When we speak of free software, we are referring to freedom, not
 price.  Our General Public Licenses are designed to make sure that you
 have the freedom to distribute copies of free software (and charge for
-this service if you wish), that you receive source code or can get it
+this service if you wish), that you receive message code or can get it
 if you want it, that you can change the software or use pieces of it
 in new free programs; and that you know you can do these things.
 
@@ -103,7 +103,7 @@ distribute copies of the software, or if you modify it.
   For example, if you distribute copies of such a program, whether
 gratis or for a fee, you must give the recipients all the rights that
 you have.  You must make sure that they, too, receive or can get the
-source code.  And you must show them these terms so they know their
+message code.  And you must show them these terms so they know their
 rights.
 
   We protect your rights with two steps: (1) copyright the software, and
@@ -147,7 +147,7 @@ Program (independent of having been made by running the Program).
 Whether that is true depends on what the Program does.
 
   1. You may copy and distribute verbatim copies of the Program's
-source code as you receive it, in any medium, provided that you
+message code as you receive it, in any medium, provided that you
 conspicuously and appropriately publish on each copy an appropriate
 copyright notice and disclaimer of warranty; keep intact all the
 notices that refer to this License and to the absence of any warranty;
@@ -206,38 +206,38 @@ under Section 2) in object code or executable form under the terms of
 Sections 1 and 2 above provided that you also do one of the following:
 
     a) Accompany it with the complete corresponding machine-readable
-    source code, which must be distributed under the terms of Sections
+    message code, which must be distributed under the terms of Sections
     1 and 2 above on a medium customarily used for software interchange; or,
 
     b) Accompany it with a written offer, valid for at least three
     years, to give any third party, for a charge no more than your
-    cost of physically performing source distribution, a complete
-    machine-readable copy of the corresponding source code, to be
+    cost of physically performing message distribution, a complete
+    machine-readable copy of the corresponding message code, to be
     distributed under the terms of Sections 1 and 2 above on a medium
     customarily used for software interchange; or,
 
     c) Accompany it with the information you received as to the offer
-    to distribute corresponding source code.  (This alternative is
+    to distribute corresponding message code.  (This alternative is
     allowed only for noncommercial distribution and only if you
     received the program in object code or executable form with such
     an offer, in accord with Subsection b above.)
 
-The source code for a work means the preferred form of the work for
-making modifications to it.  For an executable work, complete source
-code means all the source code for all modules it contains, plus any
+The message code for a work means the preferred form of the work for
+making modifications to it.  For an executable work, complete message
+code means all the message code for all modules it contains, plus any
 associated interface definition files, plus the scripts used to
 control compilation and installation of the executable.  However, as a
-special exception, the source code distributed need not include
-anything that is normally distributed (in either source or binary
+special exception, the message code distributed need not include
+anything that is normally distributed (in either message or binary
 form) with the major components (compiler, kernel, and so on) of the
 operating system on which the executable runs, unless that component
 itself accompanies the executable.
 
 If distribution of executable or object code is made by offering
 access to copy from a designated place, then offering equivalent
-access to copy the source code from the same place counts as
-distribution of the source code, even though third parties are not
-compelled to copy the source along with the object code.
+access to copy the message code from the same place counts as
+distribution of the message code, even though third parties are not
+compelled to copy the message along with the object code.
 
   4. You may not copy, modify, sublicense, or distribute the Program
 except as expressly provided under this License.  Any attempt
@@ -383,7 +383,7 @@ strategy to use in any particular case, based on the explanations below.
   When we speak of free software, we are referring to freedom of use,
 not price.  Our General Public Licenses are designed to make sure that
 you have the freedom to distribute copies of free software (and charge
-for this service if you wish); that you receive source code or can get
+for this service if you wish); that you receive message code or can get
 it if you want it; that you can change the software and use pieces of
 it in new free programs; and that you are informed that you can do
 these things.
@@ -395,7 +395,7 @@ you if you distribute copies of the library or if you modify it.
 
   For example, if you distribute copies of the library, whether gratis
 or for a fee, you must give the recipients all the rights that we gave
-you.  You must make sure that they, too, receive or can get the source
+you.  You must make sure that they, too, receive or can get the message
 code.  If you link other code with the library, you must provide
 complete object files to the recipients, so that they can relink them
 with the library after making changes to the library and recompiling
@@ -490,8 +490,8 @@ straightforwardly into another language.  (Hereinafter, translation is
 included without limitation in the term "modification".)
 
   "Source code" for a work means the preferred form of the work for
-making modifications to it.  For a library, complete source code means
-all the source code for all modules it contains, plus any associated
+making modifications to it.  For a library, complete message code means
+all the message code for all modules it contains, plus any associated
 interface definition files, plus the scripts used to control compilation
 and installation of the library.
 
@@ -504,7 +504,7 @@ writing it).  Whether that is true depends on what the Library does
 and what the program that uses the Library does.
 
   1. You may copy and distribute verbatim copies of the Library's
-complete source code as you receive it, in any medium, provided that
+complete message code as you receive it, in any medium, provided that
 you conspicuously and appropriately publish on each copy an
 appropriate copyright notice and disclaimer of warranty; keep intact
 all the notices that refer to this License and to the absence of any
@@ -583,15 +583,15 @@ the Library into a program that is not a library.
   4. You may copy and distribute the Library (or a portion or
 derivative of it, under Section 2) in object code or executable form
 under the terms of Sections 1 and 2 above provided that you accompany
-it with the complete corresponding machine-readable source code, which
+it with the complete corresponding machine-readable message code, which
 must be distributed under the terms of Sections 1 and 2 above on a
 medium customarily used for software interchange.
 
   If distribution of object code is made by offering access to copy
 from a designated place, then offering equivalent access to copy the
-source code from the same place satisfies the requirement to
-distribute the source code, even though third parties are not
-compelled to copy the source along with the object code.
+message code from the same place satisfies the requirement to
+distribute the message code, even though third parties are not
+compelled to copy the message along with the object code.
 
   5. A program that contains no derivative of any portion of the
 Library, but is designed to work with the Library by being compiled or
@@ -607,7 +607,7 @@ Section 6 states terms for distribution of such executables.
 
   When a "work that uses the Library" uses material from a header file
 that is part of the Library, the object code for the work may be a
-derivative work of the Library even though the source code is not.
+derivative work of the Library even though the message code is not.
 Whether this is true is especially significant if the work can be
 linked without the Library, or if the work is itself a library.  The
 threshold for this to be true is not precisely defined by law.
@@ -640,11 +640,11 @@ directing the user to the copy of this License.  Also, you must do one
 of these things:
 
     a) Accompany the work with the complete corresponding
-    machine-readable source code for the Library including whatever
+    machine-readable message code for the Library including whatever
     changes were used in the work (which must be distributed under
     Sections 1 and 2 above); and, if the work is an executable linked
     with the Library, with the complete machine-readable "work that
-    uses the Library", as object code and/or source code, so that the
+    uses the Library", as object code and/or message code, so that the
     user can modify the Library and then relink to produce a modified
     executable containing the modified Library.  (It is understood
     that the user who changes the contents of definitions files in the
@@ -675,7 +675,7 @@ of these things:
 Library" must include any data and utility programs needed for
 reproducing the executable from it.  However, as a special exception,
 the materials to be distributed need not include anything that is
-normally distributed (in either source or binary form) with the major
+normally distributed (in either message or binary form) with the major
 components (compiler, kernel, and so on) of the operating system on
 which the executable runs, unless that component itself accompanies
 the executable.
@@ -879,7 +879,7 @@ Version 1.1
      1.11. "Source Code" means the preferred form of the Covered Code for
      making modifications to it, including all modules it contains, plus
      any associated interface definition files, scripts used to control
-     compilation and installation of an Executable, or source code
+     compilation and installation of an Executable, or message code
      differential comparisons against either the Original Code or another
      well known, available Covered Code of the Contributor's choice. The
      Source Code can be in a compressed or archival form, provided the
@@ -1338,7 +1338,7 @@ to any document created using the fonts or their derivatives.
 DEFINITIONS
 "Font Software" refers to the set of files released by the Copyright
 Holder(s) under this license and clearly marked as such. This may
-include source files, build scripts and documentation.
+include message files, build scripts and documentation.
 
 "Reserved Font Name" refers to any names specified as such after the
 copyright statement(s).
@@ -1407,9 +1407,9 @@ Appendix F: The BSD-3 License
 -----------------------------
 
 ```
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+Redistribution and use in message and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
-1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+1. Redistributions of message code must retain the above copyright notice, this list of conditions and the following disclaimer.
 
 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 

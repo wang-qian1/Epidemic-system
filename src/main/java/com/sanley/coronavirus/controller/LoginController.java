@@ -19,7 +19,7 @@ public class LoginController {
         return userService.userLogin(username,password);
     }
 
-    @RequestMapping(value = "/register", method= RequestMethod.POST)
+    @RequestMapping(value = "/register",produces = "application/json;charset=utf-8", method= RequestMethod.POST)
     @ResponseBody
     public String toRegister(User user){
         String username = user.getUsername();

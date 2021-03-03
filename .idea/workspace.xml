@@ -2,37 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92caa9c6-6f18-476c-be6c-1a406f0fc73b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/MessageDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/StatisticsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/StatisticsServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coronavirus.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/config/DruidConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/config/DruidConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/config/MyMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/config/MyMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/CureController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/DeadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/InspectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/NewsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/TouchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/CureDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/DeadDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/HospitalDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/InspectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/InspectDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/NewsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/NewsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/PatientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/SourceDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/StatisticsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/StatisticsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/TouchDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/TouchDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Cure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Dead.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Hospital.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Inspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Patient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/CureService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/DeadService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/HospitalService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/InspectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/NewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/MyUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/MyUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/SourceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/TouchService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/CureServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/DeadServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/InspectServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/NewsServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/TouchServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/MessageServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/UserServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/MyPipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/MyPipeline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/UtilCareler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/UtilCareler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/commons/bar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cureinfo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/deadInfo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/deadList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/managerAdd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/managerList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/patientAdd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/patientAdd2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/patientAddTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/patientInfo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/patientList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/patientToCure.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/patientToDead.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/patientUpdate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/touchAdd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/touchAdd2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/touchInfo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/touchList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/flaticon/flaticon.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/flaticon/flaticon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/CHANGES.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/CHANGES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/ajax.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/ajax.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/api.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/datafiltering.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/datafiltering.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/dialog/dialog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/dialog/dialog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/divreplace.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/divreplace.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/htmlwriter/outputforflash.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/htmlwriter/outputforflash.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/htmlwriter/outputhtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/htmlwriter/outputhtml.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/readonly.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/readonly.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/wysiwygarea/fullpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/wysiwygarea/fullpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/xhtmlstyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/samples/old/xhtmlstyle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/skins/moono/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/ckeditor/skins/moono/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/api_scrolling.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/api_scrolling.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/large_js_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/large_js_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/server-side_processing.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/server-side_processing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/simple.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/state_saving.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/Scroller/examples/state_saving.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/TableTools/examples/simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins/datatables/extensions/TableTools/examples/simple.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sanley/coronavirus/CoronavirusApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sanley/coronavirus/CoronavirusApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,7 +85,7 @@
     <SUITE FILE_PATH="coverage/Coronavirus$SpiderTask_startSpider.ic" NAME="SpiderTask.startSpider Coverage Results" MODIFIED="1611645905127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.sanley.coronavirus.util.crawler.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Coronavirus$CoronavirusApplicationTests_contextLoads.ic" NAME="CoronavirusApplicationTests.contextLoads Coverage Results" MODIFIED="1614243866454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Coronavirus$CoronavirusApplicationTests_contextLoads.ic" NAME="CoronavirusApplicationTests.contextLoads Coverage Results" MODIFIED="1614656912561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.sanley.coronavirus.*</FILTER>
     </SUITE>
   </component>
@@ -60,69 +99,99 @@
     <session id="705541446">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
-          <entry key="project.open.time.1" value="8" />
+          <entry key="project.closed" value="20" />
+          <entry key="project.open.time.1" value="9" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="6" />
-          <entry key="css" value="2" />
+          <entry key="class" value="7" />
+          <entry key="css" value="3" />
           <entry key="html" value="7" />
-          <entry key="ico" value="1" />
-          <entry key="java" value="181" />
+          <entry key="ico" value="2" />
+          <entry key="java" value="289" />
           <entry key="jpeg" value="1" />
-          <entry key="jpg" value="4" />
+          <entry key="jpg" value="6" />
           <entry key="js" value="2" />
           <entry key="json" value="1" />
-          <entry key="png" value="3" />
-          <entry key="properties" value="4" />
+          <entry key="png" value="7" />
+          <entry key="properties" value="5" />
           <entry key="sql" value="4" />
           <entry key="txt" value="1" />
           <entry key="xml" value="9" />
-          <entry key="yml" value="10" />
+          <entry key="yml" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="6" />
-          <entry key="CSS" value="2" />
+          <entry key="CLASS" value="7" />
+          <entry key="CSS" value="3" />
           <entry key="HTML" value="7" />
-          <entry key="Image" value="9" />
-          <entry key="JAVA" value="181" />
+          <entry key="Image" value="16" />
+          <entry key="JAVA" value="289" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Properties" value="4" />
+          <entry key="Properties" value="5" />
           <entry key="SQL" value="4" />
           <entry key="XML" value="9" />
-          <entry key="YAML" value="10" />
+          <entry key="YAML" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="6" />
-          <entry key="java" value="3754" />
+          <entry key="dummy" value="53" />
+          <entry key="java" value="5884" />
           <entry key="xml" value="10" />
-          <entry key="yml" value="35" />
+          <entry key="yml" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3754" />
-          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="JAVA" value="5884" />
+          <entry key="PLAIN_TEXT" value="53" />
           <entry key="XML" value="10" />
-          <entry key="YAML" value="35" />
+          <entry key="YAML" value="38" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="757201734">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="77" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="77" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -133,86 +202,100 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/UserDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/PatientDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            <state relative-caret-position="210">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/PatientController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2220">
+              <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/LoginController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/MessageDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            <state relative-caret-position="331">
+              <caret line="29" column="241" selection-start-line="29" selection-start-column="241" selection-end-line="29" selection-end-column="241" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/StatisticsDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/MessageService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Message.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Authentication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-509">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/MessageServiceImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+              <folding>
+                <element signature="e#819#820#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+                <element signature="e#929#930#0" expanded="true" />
+                <element signature="e#975#976#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/MessageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/TouchController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../maven-repository/org/springframework/spring-web/5.2.3.RELEASE/spring-web-5.2.3.RELEASE.jar!/org/springframework/web/bind/annotation/RequestMapping.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/AuthenticationServiceImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/UserServiceImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-              <folding>
-                <element signature="e#680#681#0" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#962#963#0" expanded="true" />
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1193#1194#0" expanded="true" />
-                <element signature="e#1228#1229#0" expanded="true" />
-                <element signature="e#1282#1283#0" expanded="true" />
-                <element signature="e#1318#1319#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="48" column="61" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -222,8 +305,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -238,7 +321,15 @@
       <find>timelines</find>
       <find>wikis</find>
       <find>WHOArticle</find>
+      <find>find</find>
+      <find>PatientDao</find>
+      <find>PatientService</find>
+      <find>service</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>messageService</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -246,26 +337,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/CrawlingData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/CrawDataController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/MyProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/BaseServiceImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/Pipeline.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/lei.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Timelines.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Rumors.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Remarks.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/AuthenticationDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/CoronavirusApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/MyUserDetailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/New.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/GoodsGuides.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Wikis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/NewsDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Root.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/WHOArticle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Recommends.java" />
@@ -273,22 +349,45 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/StatisticsProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/StatisticsPipeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/SpiderTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/DailyData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/ProvincesDaily.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/MyProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/CitiesDaily.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/banner.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/config/DruidConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/config/MyMvcConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/DailyData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/StatisticsServiceImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/StatisticsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/UtilCareler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/MyPipeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/StatisticsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/UtilCareler.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/banner.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/NewsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/NewsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/NewsServiceImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/InspectDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/PatientDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Patient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/PatientController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/User.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sanley/coronavirus/CoronavirusApplicationTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/config/DruidConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/MyUserDetailService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/config/MyMvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/UserServiceImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/NewsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Source.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/SourceDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/TouchServiceImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/TouchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/MessageServiceImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/MessageDao.java" />
       </list>
     </option>
   </component>
@@ -318,6 +417,11 @@
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="coronavirus" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="coronavirus" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
       </expand>
       <select />
     </treeState>
@@ -328,10 +432,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="166" />
-    <option name="y" value="112" />
+    <option name="x" value="685" />
+    <option name="y" value="39" />
     <option name="width" value="1732" />
-    <option name="height" value="923" />
+    <option name="height" value="919" />
   </component>
   <component name="ProjectId" id="1mjf98DOra3LzJZ9VELnZE1ww2C" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -385,6 +489,9 @@
             <id>GeneralJavaScript</id>
           </State>
           <State>
+            <id>HTML</id>
+          </State>
+          <State>
             <id>IconsUsabilityLintAndroid</id>
           </State>
           <State>
@@ -401,6 +508,9 @@
           </State>
           <State>
             <id>Java</id>
+          </State>
+          <State>
+            <id>Java 7Java language level migration aidsJava</id>
           </State>
           <State>
             <id>Java 8Java language level migration aidsJava</id>
@@ -422,6 +532,9 @@
           </State>
           <State>
             <id>LintAndroid</id>
+          </State>
+          <State>
+            <id>LintLintAndroid</id>
           </State>
           <State>
             <id>MessagesCorrectnessLintAndroid</id>
@@ -460,6 +573,12 @@
             <id>SecurityLintAndroid</id>
           </State>
           <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring SecuritySpring</id>
+          </State>
+          <State>
             <id>Style issuesKotlin</id>
           </State>
           <State>
@@ -475,9 +594,17 @@
             <id>VisibilityJava</id>
           </State>
           <State>
+            <id>WebSocket</id>
+          </State>
+          <State>
             <id>YAML</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Ali-Check</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -486,9 +613,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -573,6 +697,15 @@
               <item name="Coronavirus" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="coronavirus" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Coronavirus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Coronavirus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -599,8 +732,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Coronavirus" type="b2602c69:ProjectViewProjectNode" />
@@ -627,6 +759,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -642,11 +777,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1614570729095" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1614757132847" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -709,8 +845,26 @@
       </method>
     </configuration>
     <configuration name="CoronavirusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="coronavirus" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sanley.coronavirus.CoronavirusApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CoronavirusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Coronavirus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sanley.coronavirus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sanley.coronavirus.CoronavirusApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -751,19 +905,19 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.CoronavirusApplication" />
-      <item itemvalue="Spring Boot.CoronavirusApplication (1)" />
       <item itemvalue="TestNG.SpiderTask.startSpider" />
       <item itemvalue="TestNG.SpiderTask" />
       <item itemvalue="Application.SpiderTask" />
       <item itemvalue="JUnit.CoronavirusApplicationTests.contextLoads" />
+      <item itemvalue="Spring Boot.CoronavirusApplication (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.CoronavirusApplication (1)" />
         <item itemvalue="JUnit.CoronavirusApplicationTests.contextLoads" />
+        <item itemvalue="Spring Boot.CoronavirusApplication" />
         <item itemvalue="TestNG.SpiderTask.startSpider" />
         <item itemvalue="Application.SpiderTask" />
-        <item itemvalue="TestNG.SpiderTask" />
       </list>
     </recent_temporary>
   </component>
@@ -797,43 +951,47 @@
       <workItem from="1614239115488" duration="419000" />
       <workItem from="1614243663091" duration="16815000" />
       <workItem from="1614562426661" duration="7570000" />
+      <workItem from="1614586488497" duration="16433000" />
+      <workItem from="1614669078013" duration="12882000" />
+      <workItem from="1614739322027" duration="10184000" />
+      <workItem from="1614757208300" duration="3393000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.02.03 at 15h 42m 18s.xml">
+    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.03.02 at 16h 10m 06s.xml">
       <configuration name="CoronavirusApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.02.03 at 15h 47m 27s.xml">
+    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.03.02 at 16h 17m 19s.xml">
       <configuration name="CoronavirusApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.02.03 at 16h 50m 30s.xml">
+    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.03.02 at 16h 45m 28s.xml">
       <configuration name="CoronavirusApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.02.03 at 17h 07m 16s.xml">
+    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.03.02 at 16h 46m 36s.xml">
       <configuration name="CoronavirusApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.02.03 at 17h 41m 28s.xml">
+    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.03.02 at 16h 47m 53s.xml">
       <configuration name="CoronavirusApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.02.03 at 18h 01m 55s.xml">
+    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.03.02 at 16h 48m 46s.xml">
       <configuration name="CoronavirusApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.02.03 at 18h 50m 51s.xml">
+    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.03.02 at 17h 02m 56s.xml">
       <configuration name="CoronavirusApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.02.25 at 11h 07m 33s.xml">
+    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.03.02 at 17h 49m 22s.xml">
       <configuration name="CoronavirusApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.02.25 at 11h 33m 54s.xml">
+    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.03.02 at 17h 53m 44s.xml">
       <configuration name="CoronavirusApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.02.25 at 17h 05m 18s.xml">
+    <history-entry file="CoronavirusApplicationTests_contextLoads - 2021.03.02 at 17h 56m 44s.xml">
       <configuration name="CoronavirusApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149564000" />
+    <option name="totallyTimeSpent" value="192456000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -848,7 +1006,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991708" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991708" visible="true" weight="0.17643923" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -857,9 +1015,9 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3979933" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39910814" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32998884" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43255296" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.30769232" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
@@ -875,14 +1033,14 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Word Book" order="5" side_tool="true" />
+      <window_info anchor="right" id="Word Book" order="5" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Maven Projects" order="6" sideWeight="0.49778762" weight="0.06663113" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="RestServices" order="10" />
       <window_info anchor="right" id="Bean Validation" order="11" />
-      <window_info anchor="right" id="Coverage" order="12" sideWeight="0.5022124" side_tool="true" weight="0.065565035" />
+      <window_info anchor="right" id="Coverage" order="12" sideWeight="0.5022124" side_tool="true" weight="0.0735646" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991708" visible="true" weight="0.25906184" />
@@ -929,71 +1087,97 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="640" key="GridCell.Tab.0.bottom" timestamp="1610015146725">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="640" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610015146725" />
-    <state width="1877" height="640" key="GridCell.Tab.0.center" timestamp="1610015146725">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="640" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610015146725" />
-    <state width="1877" height="640" key="GridCell.Tab.0.left" timestamp="1610015146725">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="640" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610015146725" />
-    <state width="1877" height="640" key="GridCell.Tab.0.right" timestamp="1610015146725">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="640" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610015146725" />
-    <state width="1877" height="640" key="GridCell.Tab.1.bottom" timestamp="1610015146725">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="640" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610015146725" />
-    <state width="1877" height="640" key="GridCell.Tab.1.center" timestamp="1610015146725">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="640" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610015146725" />
-    <state width="1877" height="640" key="GridCell.Tab.1.left" timestamp="1610015146725">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="640" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610015146725" />
-    <state width="1877" height="640" key="GridCell.Tab.1.right" timestamp="1610015146725">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="640" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610015146725" />
+    <state width="1877" height="640" key="GridCell.Tab.0.bottom" />
+    <state width="1877" height="640" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="640" key="GridCell.Tab.0.center" />
+    <state width="1877" height="640" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="640" key="GridCell.Tab.0.left" />
+    <state width="1877" height="640" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="640" key="GridCell.Tab.0.right" />
+    <state width="1877" height="640" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="640" key="GridCell.Tab.1.bottom" />
+    <state width="1877" height="640" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="640" key="GridCell.Tab.1.center" />
+    <state width="1877" height="640" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="640" key="GridCell.Tab.1.left" />
+    <state width="1877" height="640" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="640" key="GridCell.Tab.1.right" />
+    <state width="1877" height="640" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/banner.txt">
+    <entry file="jar://$PROJECT_DIR$/../maven-repository/org/mybatis/mybatis/3.5.3/mybatis-3.5.3.jar!/org/apache/ibatis/binding/MapperMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+        <state relative-caret-position="171">
+          <caret line="365" selection-start-line="365" selection-end-line="365" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/UtilCareler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="15" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/MyPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="167" column="13" lean-forward="true" selection-start-line="167" selection-start-column="13" selection-end-line="167" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/CitiesDaily.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="218">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Base.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/DeadDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/CureDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/CureServiceImp.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/DeadService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/CureController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/DeadController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/ManageServiceImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state relative-caret-position="210">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Dead.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/NewsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/NewsServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/NewsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" selection-start-line="13" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/TouchDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1004,321 +1188,240 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/ProvincesDaily.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/HospitalService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/PatientService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/New.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Root.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Rumors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Statistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" selection-start-line="12" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Timelines.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Touch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Remarks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Wikis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/WHOArticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/util/crawler/UtilCareler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="13" selection-start-line="13" selection-end-line="15" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/sanley/coronavirus/test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/InspectDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/plugins/adminLTE/css/AdminLTE.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/CoronavirusApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6210" />
+        <state relative-caret-position="120">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/MyUserDetailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3683" />
+        <state relative-caret-position="330">
+          <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sanley/coronavirus/CoronavirusApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Authentication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/StatisticsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Recommends.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Cure.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/ProvincesDaily.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/DailyData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/New.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/GoodsGuides.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" selection-start-line="9" selection-end-line="12" selection-end-column="10" />
+        <state relative-caret-position="353">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/AuthenticationDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="660">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/StatisticsServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/UserServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="78" column="10" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/NewsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/config/MySecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="83">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/DeadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/CureController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html" />
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="23" selection-start-line="23" selection-start-column="1" selection-end-line="31" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/CoronavirusApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/config/DruidConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Patient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/StatisticsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-228">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/config/MyMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/sanley/coronavirus/CoronavirusApplicationTests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/PatientServiceImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="510">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/ManageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/PatientDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/PatientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4049">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="2220">
+          <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/InspectController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Authentication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="270">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/StatisticsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1379">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="-509">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/MyUserDetailService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/MessageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/AuthenticationServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="48" column="61" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../maven-repository/org/springframework/spring-web/5.2.3.RELEASE/spring-web-5.2.3.RELEASE.jar!/org/springframework/web/bind/annotation/RequestMapping.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/TouchController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/UserServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-          <folding>
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#1228#1229#0" expanded="true" />
-            <element signature="e#1282#1283#0" expanded="true" />
-            <element signature="e#1318#1319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/entity/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/service/iml/MessageServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#929#930#0" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sanley/coronavirus/dao/MessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="29" column="241" selection-start-line="29" selection-start-column="241" selection-end-line="29" selection-end-column="241" />
         </state>
       </provider>
     </entry>

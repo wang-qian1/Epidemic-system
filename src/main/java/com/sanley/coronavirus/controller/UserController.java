@@ -4,22 +4,18 @@ Created by shkstart on 2020/3/16.
 
 
 import com.github.pagehelper.PageInfo;
-import com.sanley.coronavirus.entity.Cure;
 import com.sanley.coronavirus.entity.User;
 import com.sanley.coronavirus.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.math.BigInteger;
 import java.util.List;
 
-@Controller
+@RestController
 public class UserController {
     @Autowired
     UserService userService;
@@ -30,6 +26,19 @@ public class UserController {
         PageInfo<User> pageInfo=new PageInfo(users);
         model.addAttribute("pageInfo",pageInfo);
         return "managerlist";
+    }
+
+    //更新用户信息
+    @PostMapping(value = "/update")
+    public Boolean update(User user){
+        System.out.println(user.toString());
+        return userService.updateUser(user);
+    }
+
+    @PostMapping(value = "/manager/update")
+    public Boolean update1(User user){
+        System.out.println(user.toString());
+        return userService.updateUser(user);
     }
 
     //跳转添加页面
@@ -68,10 +77,9 @@ public class UserController {
         return "redirect:/manager/list";
     }
     //删除用户
-    @RequestMapping("/manager/delete/{id}")
-    public String delete(@PathVariable("id")int id){
-        userService.deleteUser(id);
-        return "redirect:/manager/list";
+    @RequestMapping(value = "/delete",method = RequestMethod.POST)
+    public Boolean delete(@RequestParam("username")String username){
+        return userService.deleteUser(username);
     }
 
 }

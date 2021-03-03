@@ -3,13 +3,11 @@ Created by shkstart on 2020/2/23.
 */
 
         import com.sanley.coronavirus.entity.Base;
-        import com.sanley.coronavirus.entity.Cure;
         import com.sanley.coronavirus.entity.Patient;
         import org.apache.ibatis.annotations.*;
 
         import java.sql.Date;
         import java.util.List;
-        import java.util.Map;
 
 @Mapper
 public interface PatientDao {

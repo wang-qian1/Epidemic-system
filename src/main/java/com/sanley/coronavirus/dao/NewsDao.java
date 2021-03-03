@@ -6,9 +6,22 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Mapper
 @Service
 public interface NewsDao {
+	@Select("select * from remarks")
+	public List<Remarks> findRemarks();
+	@Select("select * from goodsGuides")
+	public List<GoodsGuides> findGoodsGuides();
+	@Select("select * from rumors")
+	public List<Rumors> findRumors();
+	@Select("select * from recommends")
+	public List<Recommends> findRecommends();
+	@Select("select * from timelines")
+	public List<Timelines> findTimelines();
+
 	@Insert("insert into remarks(title,content) values(#{title},#{content})")
 	public void addRemarks(Remarks remarks);
 	@Insert("insert into goodsGuides values(#{contentImgUrls},#{recordStatus},#{categoryName},#{title})")
@@ -19,6 +32,7 @@ public interface NewsDao {
 	public void addRecommends(Recommends recommends);
 	@Insert("insert into timelines(sourceUrl,title,summary,pubDateStr,infoSource) values(#{sourceUrl},#{title},#{summary},#{pubDateStr},#{infoSource})")
 	public void addTimelines(Timelines timelines);
+
 	@Delete("truncate table remarks")
 	public void runcateRemarks();
 	@Delete("truncate table rumors")

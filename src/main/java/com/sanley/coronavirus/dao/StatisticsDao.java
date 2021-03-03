@@ -6,13 +6,39 @@ import com.sanley.coronavirus.entity.ProvincesDaily;
 import com.sanley.coronavirus.entity.Statistics;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
+
 @Mapper
 @Service
 public interface StatisticsDao {
+
+	@Select("select * from statistics")
+	public List<Statistics> findAllStatistics();
+
+	@Select("select * from statistics where position=#{position}")
+	public Statistics findByPosition(String position);
+
+	@Select("select * from daily where dateId between #{startTime} and #{endTime}")
+	public List<DailyData> findDailyByTime(@Param("startTime") int startTime,@Param("endTime") int endTime);
+
+	@Select({"<script>",
+					"select * from provinces_daily",
+					"where 1=1",
+					"<when test='provinceCode!=null and provinceCode!= \"\"'>",
+					"and provinceCode=#{provinceCode}",
+					"</when>",
+					" and dateId between #{startTime} and #{endTime}","</script>"})
+	public List<ProvincesDaily> findProvincesDailyByTime(@Param("provinceCode") String provinceCode,@Param("startTime") int startTime,@Param("endTime") int endTime);
+
+	@Select("select * from cities_daily where cityName=#{cityName}")
+	public CitiesDaily findByCitiesName(String cityName);
+
 	@Insert("insert into statistics(position,positionCode,confirmedCount,curedCount,deadCount,seriousCount,currentConfirmedCount,suspectedCount,currentConfirmedIncr,curedIncr,confirmedIncr,suspectedIncr,deadIncr) values(#{position},#{positionCode},#{confirmedCount},#{curedCount},#{deadCount},#{seriousCount},#{currentConfirmedCount},#{suspectedCount},#{currentConfirmedIncr},#{curedIncr},#{confirmedIncr},#{suspectedIncr},#{deadIncr})")
 	public void add(Statistics statistics);
 
-	@Insert("insert into daily values(#{countryName},#{countryCode},#{confirmedCount},#{curedCount},#{deadCount},#{seriousCount},#{currentConfirmedCount},#{suspectedCount},#{currentConfirmedIncr},#{curedIncr},#{confirmedIncr},#{suspectedIncr},#{deadIncr})")
+	@Insert("insert into daily values(#{dateId},#{countryName},#{countryCode},#{confirmedCount},#{curedCount},#{deadCount},#{seriousCount},#{currentConfirmedCount},#{suspectedCount},#{currentConfirmedIncr},#{curedIncr},#{confirmedIncr},#{suspectedIncr},#{deadIncr})")
 	public void addDaily(DailyData dailyData);
 
 	@Insert("insert into provinces_daily values(#{dateId},#{provinceCode},#{provinceName},#{confirmedCount},#{curedCount},#{deadCount},#{seriousCount},#{currentConfirmedCount},#{suspectedCount},#{currentConfirmedIncr},#{curedIncr},#{confirmedIncr},#{suspectedIncr},#{deadIncr})")
@@ -24,9 +50,6 @@ public interface StatisticsDao {
 	@Update("update statistics set confirmedCount=#{confirmedCount},curedCount=#{curedCount},deadCount=#{deadCount},seriousCount=#{seriousCount},currentConfirmedCount=#{currentConfirmedCount},suspectedCount=#{suspectedCount},currentConfirmedIncr=#{currentConfirmedIncr},curedIncr=#{curedIncr},confirmedIncr=#{confirmedIncr},suspectedIncr=#{suspectedIncr},deadIncr=#{deadIncr}" +
 					" where position=#{position}")
 	public void update(Statistics statistics);
-
-	@Select("select * from statistics where positionCode=#{positionCode}")
-	public Statistics find(String positionCode);
 
 	@Delete("truncate table daily")
 	public void runcateDaily();

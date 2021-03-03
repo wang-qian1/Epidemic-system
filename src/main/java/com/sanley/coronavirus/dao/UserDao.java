@@ -24,6 +24,10 @@ public interface UserDao {
     @Insert("insert into user(username,password,phone,unit,name)values(#{username},#{password},#{phone},#{unit},#{name})")
     public int addUser(User user);
 
+    //修改用户信息
+    @Update("update user set password=#{password},phone=#{phone},name=#{name},unit=#{unit} where username=#{username}")
+    public int updateUser(User user);
+
     //用户登录
     @Select("select * from user where username=#{username} and password=#{password}")
     @Results({ @Result(id = true, property = "id", column = "id"),
@@ -45,8 +49,8 @@ public interface UserDao {
     public List<User> findAll();
 
     //删除用户
-    @Delete("delete from user where id=#{id}")
-    public void deleteUser(int id);
+    @Delete("delete from user where username=#{username}")
+    public int deleteUser(String username);
 
     //为账号添加用户权限
     @Insert("insert into user_authorities(authentication_id,user_id)values(2,#{user_id})")

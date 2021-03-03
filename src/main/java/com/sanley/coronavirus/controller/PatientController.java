@@ -19,40 +19,11 @@ public class PatientController {
     @Autowired
     PatientService service;
     @Autowired
-    InspectService inspectService;
+    NewsService newsService;
 
     @Autowired
     BaseService baseService;
 
-    @Autowired
-    CureService cureService;
-
-    @Autowired
-    DeadService deadService;
-
-    //确诊病人转化治愈
-    @RequestMapping(value="/patient/addCure",method=RequestMethod.POST)
-    public String addCure(@RequestParam("baseId")int baseId,@RequestParam("dischargeDate") Date dischargeDate,@RequestParam("current") String current)
-    {
-        Cure cure=new Cure().setBaseId(baseId).setCurrent(current).setDischargeDate(dischargeDate);
-        cureService.add(cure);
-        return "redirect:/patient/list";
-    }
-    //跳转确诊病人转化治愈添加页面
-    @RequestMapping(value="/patient/toCure/{id}",method=RequestMethod.GET)
-    public String toCure(Model model,@PathVariable("id")int id)
-    {
-        model.addAttribute("baseId",id);
-        return "patientToCure";
-    }
-    //病人转化死亡
-        @RequestMapping(value="/patient/addDead",method=RequestMethod.POST)
-        public String addDead(@RequestParam("baseId")int baseId,@RequestParam("deadTime") Date deadTime)
-        {
-            Dead dead=new Dead().setDeadTime(deadTime).setBaseId(baseId);
-            deadService.add(dead);
-            return "redirect:/patient/list";
-    }
     //跳转确诊病人转化死亡页面
     @RequestMapping(value="/patient/toDead/{id}",method=RequestMethod.GET)
     public String toDead(Model model,@PathVariable("id")int id)
@@ -143,15 +114,6 @@ public class PatientController {
     {
         model.addAttribute("baseId",id);
         return "patientAddTest";
-    }
-
-    //添加检测
-    @RequestMapping(value="/patient/addTest",method=RequestMethod.POST)
-    public String addPatient(@RequestParam("baseId")int baseId, @RequestParam("testDate")Date testDate,
-                            @RequestParam("ctTest")String ctTest,@RequestParam("nuTest")String nuTest){
-       Inspect inspect= new Inspect().setBaseId(baseId).setCtTest(ctTest).setNuTest(nuTest).setTestDate(testDate);
-       inspectService.add(inspect);
-        return "redirect:/patient/info/"+inspect.getBaseId();
     }
 
     //跳转添加页面
