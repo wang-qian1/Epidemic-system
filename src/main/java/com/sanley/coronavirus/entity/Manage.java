@@ -15,7 +15,7 @@ public class Manage implements Serializable {
     private String password;
     private String name;
     private int phone;
-    private String unit;
+    private String email;
     private String permission;
 
 }

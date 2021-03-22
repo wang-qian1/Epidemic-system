@@ -50,12 +50,12 @@ public class UserController {
     //添加管理员功能
     @RequestMapping(value = "/manager/add",method = RequestMethod.POST)
     public String add(@RequestParam("username")String username, @RequestParam("name")String name,
-                      @RequestParam("password")String password, @RequestParam("unit")String unit,
+                      @RequestParam("password")String password, @RequestParam("email")String email,
                       @RequestParam("phone") BigInteger phone, @RequestParam("supermanager")char supermanager){
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         //加密密码
         String pwd=bCryptPasswordEncoder.encode(password);
-        User user=new User().setName(name).setPassword(pwd).setUsername(username).setPhone(phone).setUnit(unit);
+        User user=new User().setName(name).setPassword(pwd).setUsername(username).setPhone(phone).setEmail(email);
         System.out.println(user);
         //添加用户
         userService.addUser(user);

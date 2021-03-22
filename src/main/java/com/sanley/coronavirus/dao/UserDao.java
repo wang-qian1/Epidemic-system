@@ -18,14 +18,14 @@ public interface UserDao {
             @Result(property = "name", column = "name"),
             @Result(property = "password", column = "password"),
             @Result(property = "phone", column = "phone"),
-            @Result(property = "unit", column = "unit")})
+            @Result(property = "email", column = "email")})
     public User findByUsername(String username);
     //添加用户
-    @Insert("insert into user(username,password,phone,unit,name)values(#{username},#{password},#{phone},#{unit},#{name})")
+    @Insert("insert into user(username,password,phone,email,name)values(#{username},#{password},#{phone},#{email},#{name})")
     public int addUser(User user);
 
     //修改用户信息
-    @Update("update user set password=#{password},phone=#{phone},name=#{name},unit=#{unit} where username=#{username}")
+    @Update("update user set password=#{password},phone=#{phone},name=#{name},email=#{email} where username=#{username}")
     public int updateUser(User user);
 
     //用户登录
@@ -35,7 +35,7 @@ public interface UserDao {
             @Result(property = "name", column = "name"),
             @Result(property = "password", column = "password"),
             @Result(property = "phone", column = "phone"),
-            @Result(property = "unit", column = "unit")})
+            @Result(property = "email", column = "email")})
     public User userLogin(@Param("username") String username, @Param("password") String password);
 
     //查找所有用户
@@ -45,7 +45,7 @@ public interface UserDao {
             @Result(property = "name", column = "name"),
             @Result(property = "password", column = "password"),
             @Result(property = "phone", column = "phone"),
-            @Result(property = "unit", column = "unit")})
+            @Result(property = "email", column = "email")})
     public List<User> findAll();
 
     //删除用户

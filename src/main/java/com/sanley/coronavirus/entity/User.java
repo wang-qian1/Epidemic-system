@@ -18,7 +18,7 @@ public class User {
     private String username;
     private String password;
     private BigInteger phone;
-    private String unit;
+    private String email;
 
     public boolean isAdmin(){
         boolean flag=false;
