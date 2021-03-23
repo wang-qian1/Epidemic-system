@@ -13,9 +13,9 @@ public interface MessageService {
     //删除打卡信息
     public void deleteByUsername(String username,String dateId);
 
-    //更新物资
+    //更新打卡信息
     public void updateMessage(Message message);
 
-    //添加物资
-    public void addMessage(Message message);
+    //每日打卡
+    public boolean addMessage(Message message);
 }

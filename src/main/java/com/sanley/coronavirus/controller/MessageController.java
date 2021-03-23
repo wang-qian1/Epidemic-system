@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class MessageController {
@@ -16,14 +17,18 @@ public class MessageController {
     MessageService messageService;
 
     //添加每日打卡信息
-    @RequestMapping(value="/message/add",method=RequestMethod.POST)
-    public void addMessage(Message message){
-        messageService.addMessage(message);
+    @RequestMapping(value="/message/add",produces = "application/json;charset=utf-8",method=RequestMethod.POST)
+    public boolean addMessage(@RequestBody Map<String,Message> map){
+        if (messageService.addMessage(map.get("message"))){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     //更新每日打卡信息
     @RequestMapping(value="/message/update",method=RequestMethod.POST)
-    public void updateMessage(Message message){
+    public void updateMessage(@RequestBody Message message){
         messageService.updateMessage(message);
     }
     //删除每日打卡信息

@@ -13,11 +13,11 @@ import java.io.Serializable;
 public class Message {
     private String dateId;
     private String username;
-    private String healthCode;
+    private int healthCode;
     private String temperature1;
     private String temperature2;
     private String temperature;
-    private String state;
+    private int state;
     private String position;
 
 }

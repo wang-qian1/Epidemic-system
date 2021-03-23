@@ -31,7 +31,11 @@ public class MessageServiceImp implements MessageService {
     }
 
     @Override
-    public void addMessage(Message message) {
-        messageDao.addMessage(message);
+    public boolean addMessage(Message message) {
+        if (messageDao.addMessage(message)>0){
+            return true;
+        } else {
+            return false;
+        }
     }
 }

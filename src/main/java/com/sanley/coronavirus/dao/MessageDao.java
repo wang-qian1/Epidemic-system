@@ -25,7 +25,7 @@ public interface MessageDao {
     public void deleteByUsername(@Param("username") String username,@Param("dateId") String dateId);
 
     @Insert("insert into message values(#{dateId},#{username},#{temperature1},#{temperature2},#{state},#{temperature},#{healthCode},#{position})")
-    public void addMessage(Message message);
+    public int addMessage(Message message);
 
     @Update("update message set temperature1=#{temperature1},temperature2=#{temperature2},state=#{state},temperature=#{temperature},healthCode=#{healthCode},position=#{position},dateId=#{dateId} where username=#{username} and dateId=#{dateId}")
     public void updateMessage(Message message);

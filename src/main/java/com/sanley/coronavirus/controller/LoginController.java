@@ -24,14 +24,14 @@ public class LoginController {
     private UserService userService;
     private Logger logger = LoggerFactory.getLogger(LoginController.class);
 
-    @RequestMapping("/login")
-    public User toLogin(@RequestParam("username")String username, @RequestParam("password")String password){
-        return userService.userLogin(username,password);
+    @RequestMapping(value = "/login",produces = "application/json;charset=utf-8", method= RequestMethod.POST)
+    public User toLogin(@RequestBody Map<String,String> map){
+        return userService.userLogin(map.get("username"),map.get("password"));
     }
 
     @RequestMapping(value = "/register",produces = "application/json;charset=utf-8", method= RequestMethod.POST)
     @ResponseBody
-    public String toRegister(User user){
+    public String toRegister(@RequestBody User user){
         String username = user.getUsername();
         if (userService.findByUsername(username)==null){
             if(userService.addUser(user)){
@@ -63,7 +63,7 @@ public class LoginController {
     /**
      * 校验验证码
      */
-    @RequestMapping(value = "/checkVerify", method = RequestMethod.POST, headers = "Accept=application/json")
+    @RequestMapping(value = "/checkVerify", method = RequestMethod.GET)
     public boolean checkVerify(String code, HttpSession session) {
         try {
             //从session中获取随机数
