@@ -1,30 +1,19 @@
 /*
 Navicat MySQL Data Transfer
 
-Message Server         : mydb
-Message Server Version : 80023
-Message Host           : localhost:3306
-Message Database       : project
+Source Server         : mydb
+Source Server Version : 80023
+Source Host           : localhost:3306
+Source Database       : project
 
 Target Server Type    : MYSQL
 Target Server Version : 80023
 File Encoding         : 65001
 
-Date: 2021-03-01 16:12:11
+Date: 2021-03-24 15:08:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for authentication
--- ----------------------------
-DROP TABLE IF EXISTS `authentication`;
-CREATE TABLE `authentication` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Table structure for base
@@ -48,7 +37,7 @@ CREATE TABLE `base` (
 DROP TABLE IF EXISTS `cities_daily`;
 CREATE TABLE `cities_daily` (
   `provinceName` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `citiesName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `cityName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `confirmedCount` int DEFAULT NULL COMMENT '累计确诊',
   `curedCount` int DEFAULT NULL COMMENT '治愈',
   `deadCount` int DEFAULT NULL COMMENT '死亡',
@@ -57,21 +46,11 @@ CREATE TABLE `cities_daily` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
--- Table structure for cure
--- ----------------------------
-DROP TABLE IF EXISTS `cure`;
-CREATE TABLE `cure` (
-  `baseId` int NOT NULL,
-  `dischargeDate` date DEFAULT NULL,
-  `current` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  PRIMARY KEY (`baseId`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
-
--- ----------------------------
 -- Table structure for daily
 -- ----------------------------
 DROP TABLE IF EXISTS `daily`;
 CREATE TABLE `daily` (
+  `dateId` int NOT NULL,
   `countryName` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `countryCode` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `confirmedCount` int DEFAULT NULL COMMENT '累计确诊',
@@ -88,16 +67,6 @@ CREATE TABLE `daily` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
--- Table structure for dead
--- ----------------------------
-DROP TABLE IF EXISTS `dead`;
-CREATE TABLE `dead` (
-  `baseId` int NOT NULL,
-  `deadTime` date DEFAULT NULL,
-  PRIMARY KEY (`baseId`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
-
--- ----------------------------
 -- Table structure for goodsguides
 -- ----------------------------
 DROP TABLE IF EXISTS `goodsguides`;
@@ -109,31 +78,18 @@ CREATE TABLE `goodsguides` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
--- Table structure for inspect
+-- Table structure for message
 -- ----------------------------
-DROP TABLE IF EXISTS `inspect`;
-CREATE TABLE `inspect` (
-  `testId` int NOT NULL AUTO_INCREMENT,
-  `baseId` int NOT NULL,
-  `testDate` date DEFAULT NULL,
-  `ctTest` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `nuTest` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  PRIMARY KEY (`testId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
-
--- ----------------------------
--- Table structure for patient
--- ----------------------------
-DROP TABLE IF EXISTS `patient`;
-CREATE TABLE `patient` (
-  `baseId` int NOT NULL,
-  `infectionSource` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `onsetDate` date DEFAULT NULL,
-  `symptoms` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `hospital` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `critical` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `note` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  PRIMARY KEY (`baseId`) USING BTREE
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE `message` (
+  `dateId` varchar(8) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `temperature1` varchar(6) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `temperature2` varchar(6) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `state` int DEFAULT NULL,
+  `temperature` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `healthCode` int DEFAULT NULL,
+  `position` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
@@ -235,18 +191,7 @@ CREATE TABLE `user` (
   `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `phone` int DEFAULT NULL,
-  `unit` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
-
--- ----------------------------
--- Table structure for user_authorities
--- ----------------------------
-DROP TABLE IF EXISTS `user_authorities`;
-CREATE TABLE `user_authorities` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `authentication_id` int DEFAULT NULL,
-  `user_id` int DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
